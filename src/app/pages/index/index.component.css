@@ -1,0 +1,9 @@
+.avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  width: 12rem;
+  height: 12rem;
+}

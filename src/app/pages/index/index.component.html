@@ -1,0 +1,32 @@
+<section class="center-screen">
+  <app-card>
+    <form [formGroup]="form">
+      <div class="grid">
+        <div class="col flex justify-content-center">
+          <div class="avatar-container">
+            <fa-icon [icon]="faUser" size="6x"/>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="column">
+          <p class="title is-4 has-text-centered">Entrar no Aoba</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="column">
+          <app-input label="Private Token:" type="password" placeholder="•••••••••" [form]="getFormControl(form, 'privateToken')" />
+          <button class="button is-info w-full"
+                  type="button"
+                  (click)="handleLoginWithExtension()">Logar via extensão</button>
+          <button class="button is-success w-full mt-2" type="submit">Logar usando private token</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="column flex justify-content-center">
+          <span class="is-size-7">Um token nostr é requerido</span>
+        </div>
+      </div>
+    </form>
+  </app-card>
+</section>
