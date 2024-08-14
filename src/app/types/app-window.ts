@@ -1,7 +1,7 @@
-import NostrWindow from "./nostr-window";
+import WindowNostr from "./window-nostr";
 
 interface AppWindow extends Window {
-  nostr?: NostrWindow;
+  nostr?: WindowNostr;
 }
 
 export default AppWindow;

@@ -8,9 +8,9 @@ import AppWindow from "../types/app-window";
 export class NostrExtensionService {
   private readonly _appWindow: AppWindow = window;
 
-  constructor() { }
+  constructor() {}
 
   public async getPublicKey(): Promise<string | undefined> {
-    return this._appWindow?.nostr?.getPublicKey();
+    return this._appWindow.nostr?.getPublicKey();
   }
 }
