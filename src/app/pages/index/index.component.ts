@@ -6,6 +6,7 @@ import {InputComponent} from "../../components/input/input.component";
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {getFormControl} from "../../utils/form-utils";
 import {NostrService} from "../../services/nostr.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-index',
@@ -27,7 +28,7 @@ export class IndexComponent {
     privateToken: new FormControl('')
   });
 
-  constructor(private readonly _nostr: NostrService) {}
+  constructor(private readonly _nostr: NostrService, private readonly _router: Router) {}
 
   protected async handleLoginWithExtension(): Promise<void> {
     await this._nostr.login()
@@ -35,7 +36,9 @@ export class IndexComponent {
 
   protected async handleSubmit(event: SubmitEvent): Promise<void> {
     event.preventDefault();
-    const {privateToken} = this.form.value;
-    await this._nostr.login(privateToken);
+    await this._router.navigate(['/dashboard']);
+    return ;
+    // const {privateToken} = this.form.value;
+    // await this._nostr.login(privateToken);
   }
 }

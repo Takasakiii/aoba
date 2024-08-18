@@ -1,0 +1,11 @@
+.link-hover {
+  border-radius: 2rem;
+}
+
+.link-hover:hover {
+  background-color: hsl(0, 0%, 86%);
+}
+
+.link-hover:hover.has-background-link {
+  color: #f9fafb !important;
+}

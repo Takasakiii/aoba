@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.auto-hidden-overflow {
+  overflow-y: auto;
+}
+
 .center-screen {
   position: fixed;
   top: 0;
@@ -8,4 +12,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.default-background {
+  background-image: url("/assets/imgs/example-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.libre-barcode-39-regular {
+  font-family: "Libre Barcode 39", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
