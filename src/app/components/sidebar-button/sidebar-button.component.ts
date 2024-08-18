@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Router, RouterLink, RouterLinkActive} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 import {FaIconComponent, IconDefinition} from "@fortawesome/angular-fontawesome";
 
 @Component({
