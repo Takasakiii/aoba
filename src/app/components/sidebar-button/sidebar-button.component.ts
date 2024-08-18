@@ -16,4 +16,5 @@ import {FaIconComponent, IconDefinition} from "@fortawesome/angular-fontawesome"
 export class SidebarButtonComponent {
   @Input({required: true}) public icon!: IconDefinition;
   @Input({required: true}) public url!: string;
+  @Input({required: true}) public label!: string;
 }
