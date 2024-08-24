@@ -7,9 +7,9 @@
   <input #fileInput class="is-display-none" type="file" accept="image/*" multiple (change)="handleOnFileSelected($event)" />
 </ng-template>
 
-<div class="grid fix-height">
+<div class="image-grid fix-height">
   @for(image of imagesUrl; track image) {
-    <div class="card col-2">
+    <div class="card card-fix">
       <div class="card-image">
         <figure class="image is-4by3">
           <img [src]="image" alt="Imagem" class="image-item" />

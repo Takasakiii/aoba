@@ -1,9 +1,21 @@
 .fix-height {
   height: calc(100vh - 162px);
   overflow-y: auto;
+  padding: 1rem;
 }
 
 .image-item {
   object-fit: cover;
   object-position: center;
+  height: fit-content;
+}
+
+.image-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.card-fix {
+  height: fit-content;
 }
