@@ -1,0 +1,13 @@
+<div class="flex align-items-center">
+  <div class="flex-grow-1 flex align-items-center">
+    <ng-container [ngTemplateOutlet]="startBar" />
+  </div>
+  <div class="flex-grow-1 flex justify-content-center align-items-center" *ngIf="middleBar">
+    <ng-container [ngTemplateOutlet]="middleBar" />
+  </div>
+  <div class="flex-grow-1 flex justify-content-end align-items-center" *ngIf="endBar">
+    <ng-container [ngTemplateOutlet]="endBar" />
+  </div>
+</div>
+
+<hr class="mt-3" />

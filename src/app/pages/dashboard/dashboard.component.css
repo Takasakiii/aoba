@@ -1,0 +1,9 @@
+.fix-height {
+  height: calc(100vh - 162px);
+  overflow-y: auto;
+}
+
+.image-item {
+  object-fit: cover;
+  object-position: center;
+}

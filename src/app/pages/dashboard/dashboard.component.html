@@ -1,1 +1,20 @@
-<p>dashboard works!</p>
+<app-toolsbar [startBar]="startBar" [endBar]="endBar" />
+<ng-template #startBar>
+  <h3 class="title is-3 mb-0">Galeria</h3>
+</ng-template>
+<ng-template #endBar>
+  <app-icon-button class="" [icon]="faPlus" label="Adicionar" (onClick)="fileInput.click()" />
+  <input #fileInput class="is-display-none" type="file" accept="image/*" multiple (change)="handleOnFileSelected($event)" />
+</ng-template>
+
+<div class="grid fix-height">
+  @for(image of imagesUrl; track image) {
+    <div class="card col-2">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img [src]="image" alt="Imagem" class="image-item" />
+        </figure>
+      </div>
+    </div>
+  }
+</div>
