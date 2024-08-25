@@ -22,6 +22,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "bulma": "^1.0.2",
     "dexie": "^4.0.8",
+    "js-sha512": "^0.9.0",
     "nostr-tools": "^2.7.2",
     "primeflex": "^3.3.1",
     "rxjs": "~7.8.0",

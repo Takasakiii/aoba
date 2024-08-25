@@ -1,7 +1,8 @@
 .fix-height {
-  height: calc(100vh - 162px);
+  height: calc(100vh - 172px);
   overflow-y: auto;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 .image-item {
