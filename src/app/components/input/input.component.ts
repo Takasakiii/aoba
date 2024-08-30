@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {AbstractControl, FormControl, ReactiveFormsModule} from "@angular/forms";
+import {FormControl, ReactiveFormsModule} from "@angular/forms";
+import {generateId} from "../../utils/id-utils";
 
 @Component({
   selector: 'app-input',
@@ -15,4 +16,6 @@ export class InputComponent {
   @Input() public type: string = 'text';
   @Input() public placeholder: string = '';
   @Input({required: true}) public form!: FormControl;
+
+  protected readonly generateId: string = generateId();
 }

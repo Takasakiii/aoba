@@ -37,7 +37,6 @@ export class IndexComponent {
   protected async handleSubmit(event: SubmitEvent): Promise<void> {
     event.preventDefault();
     await this._router.navigate(['/dashboard']);
-    return ;
     // const {privateToken} = this.form.value;
     // await this._nostr.login(privateToken);
   }
