@@ -5,7 +5,6 @@ import {Component, Input} from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
 })
 export class CardComponent {
   @Input() public title?: string;

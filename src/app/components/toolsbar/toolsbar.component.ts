@@ -9,7 +9,6 @@ import {NgIf, NgTemplateOutlet} from "@angular/common";
     NgTemplateOutlet
   ],
   templateUrl: './toolsbar.component.html',
-  styleUrl: './toolsbar.component.css'
 })
 export class ToolsbarComponent {
   @Input() public startBar: TemplateRef<void> | null = null;

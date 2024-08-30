@@ -8,7 +8,6 @@ import {FaIconComponent, IconDefinition} from "@fortawesome/angular-fontawesome"
     FaIconComponent
   ],
   templateUrl: './icon-button.component.html',
-  styleUrl: './icon-button.component.css'
 })
 export class IconButtonComponent {
   @Input({required: true}) public icon!: IconDefinition;

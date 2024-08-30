@@ -9,7 +9,6 @@ import {generateId} from "../../utils/id-utils";
     ReactiveFormsModule
   ],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.css'
 })
 export class InputComponent {
   @Input({required: true}) public label!: string;
