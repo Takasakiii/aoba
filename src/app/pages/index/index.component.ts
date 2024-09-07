@@ -31,7 +31,8 @@ export class IndexComponent {
   constructor(private readonly _nostr: NostrService, private readonly _router: Router) {}
 
   protected async handleLoginWithExtension(): Promise<void> {
-    await this._nostr.login()
+    await this._nostr.login();
+    await this._router.navigate(['/dashboard']);
   }
 
   protected async handleSubmit(event: SubmitEvent): Promise<void> {

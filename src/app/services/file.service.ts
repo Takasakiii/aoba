@@ -3,12 +3,14 @@ import FileInfo from "../database/tables/file-info";
 import FileBlob from "../database/tables/file-blob";
 import * as Hash from 'js-sha512';
 import database from "../database";
+import {NostrService} from "./nostr.service";
+import FileDto from "../types/file-dto";
 
 @Injectable({
   providedIn: 'root'
 })
 export class FileService {
-  constructor() {
+  constructor(private readonly _nostrService: NostrService) {
   }
 
   public async addFile(file: File): Promise<void> {
@@ -31,6 +33,17 @@ export class FileService {
 
     database.files.add(fileInfo);
     database.filesBlob.add(fileBlob);
+
+    await this.sendNostr(fileInfo, fileBlob);
+  }
+
+  public async sendNostr(info: FileInfo, file: FileBlob): Promise<void> {
+    const fileDto: FileDto<FileBlob> = {
+      fileInfo: info,
+      fileData: file
+    };
+
+    await this._nostrService.send(fileDto);
   }
 
   public async getFiles(): Promise<File[]> {
